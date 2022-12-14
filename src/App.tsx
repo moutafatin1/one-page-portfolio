@@ -1,6 +1,8 @@
 import ProfileDesktop from "./assets/images/image-profile-desktop.webp";
 import ProfileMobile from "./assets/images/image-profile-mobile.webp";
 import ProfileTablet from "./assets/images/image-profile-tablet.webp";
+import { PatternCircle } from "./components/common/PatternCircle";
+import { PatternRings } from "./components/common/PatternRings";
 
 import { FronendmentorIcon } from "./components/icons/FronendmentorIcon";
 import { GithubIcon } from "./components/icons/GithubIcon";
@@ -21,6 +23,8 @@ const App = () => {
       </header>
 
       <section className="mx-4 mt-80 border-b pb-16">
+        <PatternCircle className="fixed -right-16 top-1/4 -z-10" />
+        <PatternRings className="fixed -left-80 top-32 -z-10" />
         <picture>
           <source media="(min-width: 1024px)" srcSet={ProfileDesktop} />
           <source media="(min-width: 640px)" srcSet={ProfileTablet} />
