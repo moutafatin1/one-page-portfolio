@@ -46,7 +46,7 @@ const App = () => {
             Based in the UK, I'm a front-end developer passionate about building
             accessible web apps that users love.
           </p>
-          <p className="cursor-pointer text-lg font-medium tracking-widest text-white underline decoration-opp-green underline-offset-[14px] transition-colors hover:text-opp-green">
+          <p className="cursor-pointer text-lg font-medium tracking-widest text-white underline decoration-opp-green decoration-2 underline-offset-[14px] transition-colors hover:text-opp-green">
             CONTACT ME
           </p>
         </div>
