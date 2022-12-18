@@ -7,9 +7,25 @@ type ProjectCardProps = {
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <li className="">
-      <picture>
+      <picture className="relative">
         <source srcSet={project.imgLarge} media="(min-width: 1024px)" />
         <img src={project.imgSmall} alt={project.name} />
+        <div className="absolute inset-0 z-10 hidden cursor-pointer items-center justify-center bg-black/70 opacity-0 transition-opacity hover:opacity-100 lg:flex">
+          <span className="mt-4 flex flex-col items-center gap-4">
+            <a
+              href={project.liveSite}
+              className="border-b-2 border-opp-green pb-2 text-lg font-medium uppercase text-white transition-colors hover:text-opp-green"
+            >
+              view project
+            </a>
+            <a
+              href={project.repo}
+              className="border-b-2 border-opp-green pb-2 text-lg font-medium uppercase text-white transition-colors hover:text-opp-green"
+            >
+              view code
+            </a>
+          </span>
+        </div>
       </picture>
       <h3 className="mt-4 mb-2 text-2xl font-bold uppercase text-white">
         {project.name}
@@ -21,7 +37,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           </li>
         ))}
       </ul>
-      <span className="mt-4 flex items-center gap-4">
+      <span className="mt-4 flex items-center gap-4 lg:hidden">
         <a
           href={project.liveSite}
           className="border-b-2 border-opp-green pb-2 text-lg font-medium uppercase text-white transition-colors hover:text-opp-green"
