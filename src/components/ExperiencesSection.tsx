@@ -27,11 +27,13 @@ const experiences: ExperienceItemProps[] = [
 
 export const ExperiencesSection = () => {
   return (
-    <ul className="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-      {experiences.map((e) => (
-        <ExperienceItem {...e} />
-      ))}
-    </ul>
+    <section className="border-b pb-16">
+      <ul className="my-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+        {experiences.map((e) => (
+          <ExperienceItem {...e} />
+        ))}
+      </ul>
+    </section>
   );
 };
 
