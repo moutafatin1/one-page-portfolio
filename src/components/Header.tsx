@@ -2,9 +2,12 @@ import { FronendmentorIcon } from "../components/icons/FronendmentorIcon";
 import { GithubIcon } from "../components/icons/GithubIcon";
 import { LinkedinIcon } from "../components/icons/LinkedinIcon";
 import { TwitterIcon } from "../components/icons/TwitterIcon";
-export const Header = () => {
+
+export const Header = ({ className }: { className?: string }) => {
   return (
-    <header className="flex flex-col items-center justify-between gap-6 py-8 sm:flex-row">
+    <header
+      className={`flex flex-col items-center justify-between gap-6 py-8 sm:flex-row ${className}`}
+    >
       <span className="text-2xl font-bold text-white sm:text-3xl">
         adamkeyes
       </span>

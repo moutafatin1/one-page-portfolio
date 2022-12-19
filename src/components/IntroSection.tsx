@@ -1,13 +1,11 @@
 import ProfileDesktop from "../assets/images/image-profile-desktop.webp";
 import ProfileMobile from "../assets/images/image-profile-mobile.webp";
 import ProfileTablet from "../assets/images/image-profile-tablet.webp";
-import { PatternCircle } from "../components/common/PatternCircle";
 import { PatternRings } from "../components/common/PatternRings";
 
 export const IntroSection = () => {
   return (
     <section className="mt-80 border-b pb-16 sm:mt-32 lg:pb-56">
-      <PatternCircle className="absolute -right-24 md:-right-16 md:translate-y-60 " />
       <PatternRings className="absolute -left-80 top-32 -z-10" />
       <picture>
         <source media="(min-width: 1024px)" srcSet={ProfileDesktop} />
